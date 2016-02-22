@@ -1,0 +1,53 @@
+//
+// MODULE: Navbar toggle
+// This module extends Bootstrap navbar toggle component
+
+// @author: Martin Staněk (https://github.com/skywalkapps)
+// @require: navbar
+// ----------------------------------------
+
+.navbar-toggle-uppercase() when (@navbar-toggle-uppercase) {
+  text-transform: uppercase;
+}
+
+.navbar-toggle {
+  line-height: 1; // normalization
+
+  &.navbar-toggle-left {
+    float: left;
+    margin-left: 0.5 * @grid-gutter-width;
+  }
+}
+
+// Text label for hamburger menu
+.navbar-toggle-label {
+    .navbar-toggle-uppercase;
+
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4px;
+    color: @navbar-default-toggle-icon-bar-bg;
+    font-size: @font-size-base;
+    font-weight: bold;
+}
+
+// Wrapper for .icon-bar
+.navbar-toggle-icon {
+  display: inline-block;
+}
+
+.navbar-default {
+  .navbar-toggle {
+    border-color: @navbar-toggle-default-border;
+  }
+}
+
+.navbar-inverse {
+  .navbar-toggle {
+    border-color: @navbar-toggle-inverse-border;
+  }
+
+  .navbar-toggle-label {
+    color: @navbar-inverse-toggle-icon-bar-bg;
+  }
+}

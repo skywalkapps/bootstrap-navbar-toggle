@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML, CSS, bootstrap, front-end, frontend, plugin, module">
+  <meta name="description" content="Did you know that hamburger menu is not very <a href="https://lmjabreu.com/post/why-and-how-to-avoid-hamburger-menus/">user friendly</a>? Improve your mobile experience with Navbar Toggle component.">
+  <meta name="author" content="Martin Staněk">
+
+  <title>Bootstrap Navbar Toggle  - by @skywalkapps</title>
+
+  <!-- Common stylesheet for all devices -->
+  <link rel="stylesheet" href="stylesheets/skywalk-docs.min.css">
+  <link rel="stylesheet" href="stylesheets/bootstrap-dropmenu.min.css">
+  <!-- Place anything custom after this. -->
+
+
+  <!-- Favicons -->
+  <meta name="apple-mobile-web-app-title" content="Skywalk">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+
+    <!-- Place anything custom after this. -->
+  </head>
+
+
+  <body class="sw-docs" data-spy="scroll" data-target=".sw-aside">
+    <a class="sr-only" href="#content">Skip navigation</a>
+
+    <!-- Page search and navigation -->
+    <div class="l-sidebar">
+      <div class="l-sidebar-body">
+        <header class="navbar navbar-fixed-top navbar-default" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle pull-left collapsed" type="button" data-toggle="collapse" data-target=".sw-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="http://skywalkapps.github.io" class="navbar-brand logo"><span>Skywalk</span> <small>Navbar Toggle</small></a>
+    </div>
+    <nav class="collapse navbar-collapse sw-navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#">Bootstrap for Apps</a></li> -->
+        <li><a href="https://github.com/skywalkapps/bootstrap-navbar-toggle">Github</a></li>
+        <li>
+          <div class="btn-group">
+            <a href="https://github.com/skywalkapps/bootstrap-navbar-toggle/archive/master.zip" class="btn btn-primary navbar-btn" role="button">
+              Download Navbar Toggle v0.9.0
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+      </div>
+    </div><!-- /l-sidebar -->
+
+    <!-- Page content -->
+    <div id="content" class="l-body" role="main">
+
+      <div class="sw-header" id="introduction">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="page-header">Bootstrap Navbar Toggle</h1>
+              <p class="sw-text lead">Did you know that hamburger menu is not very <a href="https://lmjabreu.com/post/why-and-how-to-avoid-hamburger-menus/">user friendly</a>? Improve your mobile experience with Navbar Toggle component.</p>
+            </div>
+          </div>
+
+        </div><!-- /container -->
+
+      </div><!-- /sw-header -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 content">
+            <h3 id="navbar-toggle-label">Navbar Toggle Label</h3>
+
+<p>Bootstrap Navbar component is designed for  <a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a> approach. Therefore, the navbar renders as collapsed on mobile devices. It can be toggled by a <a href="https://en.wikipedia.org/wiki/Hamburger_button">hamburger button</a>. Unfortunately, hamburger icons are proved to be less efficient and <a href="http://exisweb.net/menu-eats-hamburger">not very usable</a>.</p>
+
+<p>Navbar Toggle component extends the default <code class="highlighter-rouge">.navbar-toggle</code> element and adds features to increase usability.</p>
+
+<div class="sw-example" id="navbar-toggle">
+  <nav class="navbar navbar-default">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="navbar-toggle-label">
+        Menu <span class="sr-only">(toggle)</span>
+      </span>
+
+      <span class="navbar-toggle-icon">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </span>
+    </button>
+  </nav>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#bs-example-navbar-collapse-1"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-label"</span><span class="nt">&gt;</span>
+      Menu <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(toggle)<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre>
+</div>
+
+<p>You don’t always want to have the toggle button on the right side. Add <code class="highlighter-rouge">.navbar-toggle-left</code> to the <code class="highlighter-rouge">navbar-toggle</code> element to change its position on mobile devices.</p>
+
+<div class="sw-example" id="navbar-toggle-2">
+  <nav class="navbar navbar-default">
+    <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+      <span class="navbar-toggle-label">
+        Menu <span class="sr-only">(toggle)</span>
+      </span>
+
+      <span class="navbar-toggle-icon">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </span>
+    </button>
+  </nav>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle navbar-toggle-left collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#bs-example-navbar-collapse-2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-label"</span><span class="nt">&gt;</span>
+      Menu <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(toggle)<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="inversed-theme">Inversed Theme</h3>
+
+<p>Bootstrap navbar component comes in two color variants. Navbar toggle can be used with both of them.</p>
+
+<div class="sw-example" id="navbar-toggle">
+  <nav class="navbar navbar-inverse">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" aria-expanded="false">
+      <span class="navbar-toggle-label">
+        Menu <span class="sr-only">(toggle)</span>
+      </span>
+
+      <span class="navbar-toggle-icon">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </span>
+    </button>
+  </nav>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+</code></pre>
+</div>
+
+<h2 id="navbar-toggle-overview">Navbar Toggle Overview</h2>
+
+<h3 id="span-classtext-mutedmodule-spannavbar-toggle"><span class="text-muted">Module: </span>Navbar Toggle</h3>
+
+<p>This table gives you a quick overview of elements and variables.</p>
+
+<div class="table-responsive sw-table">
+  <table class="table table-bordered">
+    <thead>
+     <tr>
+       <th style="width: 200px">Name</th>
+       <th style="width: 200px">Class</th>
+       <th>Usage</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Toggle Button</strong></td>
+        <td><code>.navbar-toggle</code></td>
+        <td>
+          <p>Default Bootstrap toggle button.</p>
+          <strong>Variables:</strong>
+          <ul>
+            <li><code>@navbar-toggle-uppercase: true;</code><br /><span class="text-muted">If set to TRUE, navbar toggle label will be uppercase</span></li>
+            <li><code>@navbar-toggle-font-size: @font-size-base;</code><br /><span class="text-muted">Option to override default font-size </span></li>
+            <li><code>@navbar-toggle-default-border: @navbar-default-border;</code><br /><span class="text-muted">Option to change default border color</span></li>
+            <li><code>@navbar-toggle-inverse-border: @navbar-inverse-border;</code><br /><span class="text-muted">Option to change inverse border color</span></li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>Toggle Label</strong></td>
+        <td><code>.navbar-toggle-label</code></td>
+        <td>Wrapper for the button label.</td>
+      </tr>
+
+      <tr>
+        <td><strong>Toggle Icon</strong></td>
+        <td><code>.navbar-toggle-icon</code></td>
+        <td>Wrapper for the hamburger icon.</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+          </div>
+        
+          <div class="col-md-3 hidden-sm hidden-xs">
+            <div class="sw-aside">
+  <nav class="sw-nav-tree">
+    <ul class="nav">
+      <li><a href="#navbar-toggle-label">Navbar Toggle Label</a></li>
+      <li><a href="#inversed-theme">Inversed Theme</a></li>
+      <li class="nav-divider"></li>
+      <li><a href="#navbar-toggle-overview">Navbar Toggle Overview</a></li>
+    </ul>
+  </nav>
+</div>
+
+          </div>
+        </div>
+
+
+        <div class="sw-section sw-footer">
+	<div class="row">
+	  <div class="col-md-6 col-md-offset-3">
+	    <p class="sw-text">Navbar Toggle is part of Skywalk, set of components and extensions for Bootstrap Framework. Skywalk gives you fine quality components, which will save you a lot of development time.</p>
+
+	    <p class="sw-text">Created with care by Martin Staněk, Twitter: <a href="https://twitter.com/koucik">@koucik</a>, Github: <a href="https://github.com/skywalkapps">@skywalkapps</a> </p>
+	  </div>
+	</div>
+</div><!-- /sw-section -->
+
+      </div>
+    </div>
+
+    <!-- Footer and JS -->
+    <!--
+	Javascripts
+	==================================================
+-->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<!-- <script src="javascripts/bootstrap-dropmenu.js"></script> -->
+
+<script>
+$(function(){
+  $('.sw-aside').affix({
+    offset: {
+      top: $('.sw-header').outerHeight() - 45 // margin
+    }
+  })
+})
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72436545-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  </body>
+</html>
