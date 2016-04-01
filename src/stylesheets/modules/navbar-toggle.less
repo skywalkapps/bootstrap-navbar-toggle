@@ -6,48 +6,88 @@
 // @require: navbar
 // ----------------------------------------
 
-.navbar-toggle-uppercase() when (@navbar-toggle-uppercase) {
-  text-transform: uppercase;
-}
-
 .navbar-toggle {
-  line-height: 1; // normalization
+  line-height: 1; // normalization for inline block elements
 
+  // Left alignment
   &.navbar-toggle-left {
     float: left;
     margin-left: 0.5 * @grid-gutter-width;
   }
 }
 
-// Text label for hamburger menu
+// Text label for the navbar toggle
 .navbar-toggle-label {
-    .navbar-toggle-uppercase;
+  display: inline-block;
+  vertical-align: top;
+  color: @navbar-default-toggle-icon-bar-bg;
+  font-size: @font-size-base;
+  font-weight: bold;
+  text-transform: @navbar-toggle-transform;
 
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 4px;
-    color: @navbar-default-toggle-icon-bar-bg;
-    font-size: @font-size-base;
-    font-weight: bold;
+  + .navbar-toggle-icon {
+    margin-left: 4px;
+  }
+
+  // VARIANT: Inverse Navbar Toggle label
+  .navbar-inverse & {
+    color: @navbar-inverse-toggle-icon-bar-bg;
+  }
 }
 
 // Wrapper for .icon-bar
 .navbar-toggle-icon {
   display: inline-block;
-}
 
-.navbar-default {
-  .navbar-toggle {
-    border-color: @navbar-toggle-default-border;
+  // Remove top margin set by default Bootstrap
+  > .icon-bar + .icon-bar {
+    margin-top: 0;
   }
 }
+/* Icon 1 */
 
-.navbar-inverse {
-  .navbar-toggle {
-    border-color: @navbar-toggle-inverse-border;
-  }
+.navbar-toggle-icon {
+  position: relative;
+  width: 22px;
+  height: 14px;
 
-  .navbar-toggle-label {
-    color: @navbar-inverse-toggle-icon-bar-bg;
-  }
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
 }
+
+.navbar-toggle-icon span {
+  display: block;
+  position: absolute;
+  opacity: 1;
+  left: 0;
+  transition: .25s ease-in-out;
+}
+
+.navbar-toggle.collapsed .icon-bar:nth-child(1) {
+  top: 0;
+}
+
+.navbar-toggle.collapsed .icon-bar:nth-child(2) {
+  top: 6px;
+}
+
+.navbar-toggle.collapsed .icon-bar:nth-child(3) {
+  top: 12px;
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(1) {
+  top: 6px;
+  transform: rotate(45deg);
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(3) {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+
+

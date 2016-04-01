@@ -10,14 +10,13 @@ description: Did you know that hamburger menu is not very <a href="https://lmjab
 
 Bootstrap Navbar component is designed for  <a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a> approach. Therefore, the navbar renders as collapsed on mobile devices. It can be toggled by a <a href="https://en.wikipedia.org/wiki/Hamburger_button">hamburger button</a>. Unfortunately, hamburger icons are proved to be less efficient and <a href="http://exisweb.net/menu-eats-hamburger">not very usable</a>.
 
-Navbar Toggle component extends the default `.navbar-toggle` element and adds features to increase usability.
+Navbar Toggle component extends the default `.navbar-toggle` element and adds label to increase usability. You can also leave out `.navbar-toggle-icon` completely.
 
 <div class="sw-example" id="navbar-toggle">
   <nav class="navbar navbar-default">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-      <span class="navbar-toggle-label">
-        Menu <span class="sr-only">(toggle)</span>
-      </span>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sw-example-navbar-collapse-1" data-label-expanded="Close" aria-expanded="false">
+      <span class="navbar-toggle-label">Menu</span>
+      <span class="sr-only">(toggle)</span>
 
       <span class="navbar-toggle-icon">
         <span class="icon-bar"></span>
@@ -25,15 +24,17 @@ Navbar Toggle component extends the default `.navbar-toggle` element and adds fe
         <span class="icon-bar"></span>
       </span>
     </button>
+
+    <div class="collapse navbar-collapse" id="sw-example-navbar-collapse-1">
+    </div>
   </nav>
 </div>
 
 ~~~html
 <nav class="navbar navbar-default">
-  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-    <span class="navbar-toggle-label">
-      Menu <span class="sr-only">(toggle)</span>
-    </span>
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" data-label-expanded="Close" aria-expanded="false">
+    <span class="navbar-toggle-label">Menu</span>
+    <span class="sr-only">(toggle)</span>
 
     <span class="navbar-toggle-icon">
       <span class="icon-bar"></span>
@@ -48,10 +49,9 @@ You don't always want to have the toggle button on the right side. Add `.navbar-
 
 <div class="sw-example" id="navbar-toggle-2">
   <nav class="navbar navbar-default">
-    <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-      <span class="navbar-toggle-label">
-        Menu <span class="sr-only">(toggle)</span>
-      </span>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sw-example-navbar-collapse-2" data-label-expanded="Close" aria-expanded="false">
+      <span class="navbar-toggle-label">Menu</span>
+      <span class="sr-only">(toggle)</span>
 
       <span class="navbar-toggle-icon">
         <span class="icon-bar"></span>
@@ -59,15 +59,17 @@ You don't always want to have the toggle button on the right side. Add `.navbar-
         <span class="icon-bar"></span>
       </span>
     </button>
+
+    <div class="collapse navbar-collapse" id="sw-example-navbar-collapse-2">
+    </div>
   </nav>
 </div>
 
 ~~~html
 <nav class="navbar navbar-default">
-  <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-    <span class="navbar-toggle-label">
-      Menu <span class="sr-only">(toggle)</span>
-    </span>
+  <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" data-label-expanded="Close" aria-expanded="false">
+    <span class="navbar-toggle-label">Menu</span>
+    <span class="sr-only">(toggle)</span>
 
     <span class="navbar-toggle-icon">
       <span class="icon-bar"></span>
@@ -84,10 +86,9 @@ Bootstrap navbar component comes in two color variants. Navbar toggle can be use
 
 <div class="sw-example" id="navbar-toggle">
   <nav class="navbar navbar-inverse">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" aria-expanded="false">
-      <span class="navbar-toggle-label">
-        Menu <span class="sr-only">(toggle)</span>
-      </span>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sw-example-navbar-collapse-3" data-label-expanded="Close" aria-expanded="false">
+      <span class="navbar-toggle-label">Menu</span>
+      <span class="sr-only">(toggle)</span>
 
       <span class="navbar-toggle-icon">
         <span class="icon-bar"></span>
@@ -95,11 +96,28 @@ Bootstrap navbar component comes in two color variants. Navbar toggle can be use
         <span class="icon-bar"></span>
       </span>
     </button>
+
+    <div class="collapse navbar-collapse" id="sw-example-navbar-collapse-3">
+    </div>
   </nav>
 </div>
 
 ~~~html
+<nav class="navbar navbar-inverse">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sw-example-navbar-collapse-3" data-label-expanded="Close" aria-expanded="false">
+    <span class="navbar-toggle-label">Menu</span>
+    <span class="sr-only">(toggle)</span>
 
+    <span class="navbar-toggle-icon">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="sw-example-navbar-collapse-3">
+  </div>
+</nav>
 ~~~
 
 
