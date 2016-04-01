@@ -16,7 +16,8 @@
 
   <!-- Common stylesheet for all devices -->
   <link rel="stylesheet" href="stylesheets/skywalk-docs.min.css">
-  <link rel="stylesheet" href="stylesheets/bootstrap-dropmenu.min.css">
+  <link rel="stylesheet" href="assets/stylesheets/docs.css">
+  <link rel="stylesheet" href="stylesheets/bootstrap-navbar-toggle.min.css">
   <!-- Place anything custom after this. -->
 
 
@@ -100,14 +101,13 @@
 
 <p>Bootstrap Navbar component is designed for  <a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a> approach. Therefore, the navbar renders as collapsed on mobile devices. It can be toggled by a <a href="https://en.wikipedia.org/wiki/Hamburger_button">hamburger button</a>. Unfortunately, hamburger icons are proved to be less efficient and <a href="http://exisweb.net/menu-eats-hamburger">not very usable</a>.</p>
 
-<p>Navbar Toggle component extends the default <code class="highlighter-rouge">.navbar-toggle</code> element and adds features to increase usability.</p>
+<p>Navbar Toggle component extends the default <code class="highlighter-rouge">.navbar-toggle</code> element and adds label to increase usability. You can also leave out <code class="highlighter-rouge">.navbar-toggle-icon</code> completely.</p>
 
 <div class="sw-example" id="navbar-toggle">
   <nav class="navbar navbar-default">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-      <span class="navbar-toggle-label">
-        Menu <span class="sr-only">(toggle)</span>
-      </span>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sw-example-navbar-collapse-1" data-label-expanded="Close" aria-expanded="false">
+      <span class="navbar-toggle-label">Menu</span>
+      <span class="sr-only">(toggle)</span>
 
       <span class="navbar-toggle-icon">
         <span class="icon-bar"></span>
@@ -115,14 +115,16 @@
         <span class="icon-bar"></span>
       </span>
     </button>
+
+    <div class="collapse navbar-collapse" id="sw-example-navbar-collapse-1">
+    </div>
   </nav>
 </div>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-default"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#bs-example-navbar-collapse-1"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-label"</span><span class="nt">&gt;</span>
-      Menu <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(toggle)<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#bs-example-navbar-collapse-1"</span> <span class="na">data-label-expanded=</span><span class="s">"Close"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-label"</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(toggle)<span class="nt">&lt;/span&gt;</span>
 
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-icon"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -138,10 +140,9 @@
 
 <div class="sw-example" id="navbar-toggle-2">
   <nav class="navbar navbar-default">
-    <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-      <span class="navbar-toggle-label">
-        Menu <span class="sr-only">(toggle)</span>
-      </span>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sw-example-navbar-collapse-2" data-label-expanded="Close" aria-expanded="false">
+      <span class="navbar-toggle-label">Menu</span>
+      <span class="sr-only">(toggle)</span>
 
       <span class="navbar-toggle-icon">
         <span class="icon-bar"></span>
@@ -149,14 +150,16 @@
         <span class="icon-bar"></span>
       </span>
     </button>
+
+    <div class="collapse navbar-collapse" id="sw-example-navbar-collapse-2">
+    </div>
   </nav>
 </div>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-default"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle navbar-toggle-left collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#bs-example-navbar-collapse-2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-label"</span><span class="nt">&gt;</span>
-      Menu <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(toggle)<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle navbar-toggle-left collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#bs-example-navbar-collapse-2"</span> <span class="na">data-label-expanded=</span><span class="s">"Close"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-label"</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(toggle)<span class="nt">&lt;/span&gt;</span>
 
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-icon"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -174,10 +177,9 @@
 
 <div class="sw-example" id="navbar-toggle">
   <nav class="navbar navbar-inverse">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" aria-expanded="false">
-      <span class="navbar-toggle-label">
-        Menu <span class="sr-only">(toggle)</span>
-      </span>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sw-example-navbar-collapse-3" data-label-expanded="Close" aria-expanded="false">
+      <span class="navbar-toggle-label">Menu</span>
+      <span class="sr-only">(toggle)</span>
 
       <span class="navbar-toggle-icon">
         <span class="icon-bar"></span>
@@ -185,10 +187,27 @@
         <span class="icon-bar"></span>
       </span>
     </button>
+
+    <div class="collapse navbar-collapse" id="sw-example-navbar-collapse-3">
+    </div>
   </nav>
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-inverse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#sw-example-navbar-collapse-3"</span> <span class="na">data-label-expanded=</span><span class="s">"Close"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-label"</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(toggle)<span class="nt">&lt;/span&gt;</span>
+
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggle-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span> <span class="na">id=</span><span class="s">"sw-example-navbar-collapse-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
 </code></pre>
 </div>
 
@@ -277,7 +296,7 @@
 -->
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="libs/bootstrap/bootstrap.min.js"></script>
-<!-- <script src="javascripts/bootstrap-dropmenu.js"></script> -->
+<script src="javascripts/bootstrap-navbar-toggle.js"></script>
 
 <script>
 $(function(){
