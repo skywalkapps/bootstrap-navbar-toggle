@@ -1,4 +1,4 @@
-# [Navbar Toggle plugin for Bootstrap 3](http://skywalkapps.github.io/bootstrap-navbar-toggle)
+# [Navbar Toggle extension for Bootstrap 3](http://skywalkapps.github.io/bootstrap-navbar-toggle)
 ![Bower version](https://img.shields.io/bower/v/bootstrap.svg?style=flat)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
 
@@ -6,7 +6,7 @@ To get started, check out <http://skywalkapps.github.io/bootstrap-navbar-toggle>
 
 ## Quick start
 
-Navbar Toggle plugin is built for Bootstrap 3. You have following options of installation:
+Navbar Toggle extension is built for Bootstrap 3. You have following options of installation:
 
 - [Download the latest release](https://github.com/skywalkapps/bootstrap-navbar-toggle/archive/v0.9.0.zip).
 - Clone the repo: `git clone https://github.com/skywalkapps/bootstrap-navbar-toggle.git`.
@@ -22,6 +22,11 @@ bootstrap-dropmenu/
     ├── bootstrap-navbar-toggle.css
     └── bootstrap-navbar-toggle.min.css
 ```
+
+### Features
+
+* Adds label to the toggle button (both inactive and open state)
+* Animates hamburger icon
 
 ## Creator
 
