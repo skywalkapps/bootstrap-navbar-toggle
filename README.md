@@ -8,19 +8,23 @@ To get started, check out <http://skywalkapps.github.io/bootstrap-navbar-toggle>
 
 Navbar Toggle extension is built for Bootstrap 3. You have following options of installation:
 
-- [Download the latest release](https://github.com/skywalkapps/bootstrap-navbar-toggle/archive/v0.9.0.zip).
+- [Download the latest release](https://github.com/skywalkapps/bootstrap-navbar-toggle/archive/v0.9.1.zip).
 - Clone the repo: `git clone https://github.com/skywalkapps/bootstrap-navbar-toggle.git`.
 - Install with [Bower](http://bower.io): `bower install bootstrap-navbar-toggle`.
 
 ### How to use
 
-The plugin requires only one file to include in your project. Within the download you'll find minified and plain versions of CSS. JavaScript is not necessary for current version of the plugin.
+The plugin requires a bit of CSS and JS. Within the download you'll find minified and plain versions.
 
 ```
 bootstrap-dropmenu/
 └── dist/
-    ├── bootstrap-navbar-toggle.css
-    └── bootstrap-navbar-toggle.min.css
+    ├── stylesheets
+    |   ├── bootstrap-navbar-toggle.css
+    |   └── bootstrap-navbar-toggle.min.css
+    └── javascripts
+        ├── bootstrap-navbar-toggle.js
+        └── bootstrap-navbar-toggle.min.js
 ```
 
 ### Features

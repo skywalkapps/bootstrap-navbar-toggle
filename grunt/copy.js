@@ -6,7 +6,7 @@
 module.exports = {
   css: {
     files: [
-      { expand: true, cwd: 'dist/stylesheets', src: ['*'], dest: 'docs/stylesheets' }
+      { expand: true, cwd: 'dist', src: ['**'], dest: 'docs' }
     ]
   },
   assets: {

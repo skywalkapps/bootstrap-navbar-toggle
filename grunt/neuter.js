@@ -10,7 +10,7 @@ module.exports = {
       filepathTransform: function(filepath){ return 'src/javascripts/' + filepath; },
       template: '{%= src %}'
     },
-    dest:'docs/javascripts/<%= package.name %>.js',
+    dest:'dist/javascripts/<%= package.name %>.js',
     src: 'src/javascripts/app.js'
   }
 };
