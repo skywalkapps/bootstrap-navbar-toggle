@@ -27,7 +27,7 @@ repo:             https://github.com/skywalkapps/bootstrap-navbar-toggle
 vendor:			      ./vendor
 download:
   source:         https://github.com/skywalkapps/bootstrap-navbar-toggle/archive/master.zip
-  dist:           https://github.com/skywalkapps/bootstrap-navbar-toggle/releases/download/v0.9.1/bootstrap-navbar-toggle-0.9.0-dist.zip
+  dist:           https://github.com/skywalkapps/bootstrap-navbar-toggle/releases/download/v0.9.1/bootstrap-navbar-toggle-0.9.1-dist.zip
 
 blog:             http://skywalkapps.github/articles
 
